@@ -35,6 +35,22 @@
     return `<span class="plat" title="${p}">${code}</span>`;
   }
 
+  // ---- Store link buttons ----
+  // variant: 'card' (compact) or 'panel' (larger)
+  function storeLinks(g, variant) {
+    const l = g.links;
+    if (!l || (!l.ios && !l.aos && !l.itch)) return '';
+    const stores = { ios: 'App Store', aos: 'Google Play', itch: 'Itch.io' };
+    const labels = { ios: 'iOS', aos: 'AOS', itch: 'Itch.io' };
+    const btn = (href, key) =>
+      `<a class="store-btn ${variant}" href="${href}" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="${labels[key]} on ${stores[key]}">${labels[key]}</a>`;
+    let out = '';
+    if (l.ios) out += btn(l.ios, 'ios');
+    if (l.aos) out += btn(l.aos, 'aos');
+    if (l.itch) out += btn(l.itch, 'itch');
+    return `<div class="store-links ${variant}">${out}</div>`;
+  }
+
   function render() {
     grid.innerHTML = '';
     const list = GAMES.filter(g => matches(g, active));
@@ -50,12 +66,18 @@
         <div class="platforms">${g.platforms.map(platPill).join('')}</div>
         <div class="thumb">${thumbContent}</div>
         <div class="meta">
-          <div class="name">${g.name}</div>
+          <div class="name-row">
+            <div class="name">${g.name}</div>
+            ${storeLinks(g, 'card')}
+          </div>
           <div class="sub">
             <span>${g.tagline}</span>
           </div>
         </div>
       `;
+      // Graceful fallback: if a cover image is missing, swap in the procedural icon
+      const coverImg = card.querySelector('.thumb img');
+      if (coverImg) coverImg.addEventListener('error', () => { coverImg.parentNode.innerHTML = window.renderCover(g); }, { once: true });
       card.addEventListener('click', (e) => { e.stopPropagation(); openModal(g); });
       grid.appendChild(card);
     });
@@ -170,6 +192,7 @@
       <div class="m-role-tag">${g.role}</div>
       <h3 class="m-title">${g.name}</h3>
       <p class="m-tagline">${g.tagline}</p>
+      ${storeLinks(g, 'panel')}
       <div class="m-chips">
         ${g.platforms.map(p => `<span>${p}</span>`).join('')}
       </div>
@@ -223,7 +246,6 @@
   modalClose.addEventListener('click', (e) => { e.stopPropagation(); closeModal(); });
   // Guard: only close if mousedown AND click both land on the backdrop itself.
   // Without this, the click that OPENED the modal (on a card) can bubble up and
-  // hit the backdrop handler once the backdrop becomes visible in the same tick.
   let mdTarget = null;
   modalBack.addEventListener('mousedown', (e) => { mdTarget = e.target; });
   modalBack.addEventListener('click', (e) => {

@@ -5,9 +5,38 @@
 // =============================================================
 
 window.GAMES = [
+  // ── Chess (freelance) ──────────────────────────────────────
+  {
+    id: 'chess-engine',
+    name: 'Chess Engine',
+    tagline: 'Bitboard Chess Engine · Depth 22',
+    year: '2025',
+    platforms: [],
+    genres: ['puzzle'],
+    role: 'Solo Dev · Chess Engine · Freelance',
+    stack: ['C#', 'Bitboards', 'Negamax', 'Alpha-Beta', 'Bit Manipulation'],
+    bullets: [
+      'Full-featured chess game — Hint, Undo, Redo and Random Move all built in',
+      'Custom chess engine that searches up to depth 22, built on a bitboard board representation for extreme performance',
+      'Move generation with bit-shifting; search via DFS with alpha-beta pruning (negamax), move ordering and iterative deepening to reach deep ply counts',
+      'Written entirely without AI assistance — implemented from first principles using primary references from chessprogramming.org',
+      'Freelance project diving deep into low-level algorithms: bitboard manipulation, alpha-beta search-tree pruning and evaluation tuning',
+    ],
+    palette: ['#769656', '#eeeed2', '#312e2b'],
+    icon: 'chess',
+    cover: 'assets/chess_appicon.png',
+    media: [
+      { type: 'video', src: 'assets/chess-gameplay-video.mp4' },
+      { type: 'image', src: 'assets/chess-gameplay-1.png' },
+      { type: 'image', src: 'assets/chess-gameplay-2.png' },
+      { type: 'image', src: 'assets/chess-gameplay-3.png' },
+    ],
+  },
+
   // ── 1 ──────────────────────────────────────────────────────
   {
     id: 'car-sort',
+    links: { ios: 'https://apps.apple.com/us/app/car-sort/id6746180309?l=vi', aos: 'https://play.google.com/store/apps/details?id=car.jam.traffic.puzzle.match.parking.escape&hl=en' },
     name: 'Car Sort',
     tagline: 'Match-3 Cars Puzzle',
     year: '2024',
@@ -42,6 +71,7 @@ window.GAMES = [
   // ── 2 ──────────────────────────────────────────────────────
   {
     id: 'hexa-sort',
+    links: { ios: 'https://apps.apple.com/us/app/hexa-stack-color-hexagon-sort/id6654905491?l=vi', aos: 'https://play.google.com/store/apps/details?id=leogame.hexa.sort&hl=en' },
     name: 'Hexa Sort',
     tagline: 'Color Hexagon Sort',
     year: '2024',
@@ -71,6 +101,7 @@ window.GAMES = [
   // ── 3 ──────────────────────────────────────────────────────
   {
     id: 'bus-jam',
+    links: { ios: 'https://apps.apple.com/kh/app/bus-jam-master-traffic-escape/id6738465207' },
     name: 'Bus Jam Master',
     tagline: 'Traffic Escape',
     year: '2024',
@@ -100,6 +131,7 @@ window.GAMES = [
   // ── 4 ──────────────────────────────────────────────────────
   {
     id: 'save-the-dog',
+    links: { ios: 'https://apps.apple.com/us/app/save-the-dog-draw-line-dop/id1662076281?l=vi', aos: 'https://play.google.com/store/apps/details?id=leogame.save.the.dog&hl=en' },
     name: 'Save the Dog',
     tagline: 'Draw Line DOP',
     year: '2023',
@@ -128,6 +160,7 @@ window.GAMES = [
   // ── 5 ──────────────────────────────────────────────────────
   {
     id: 'ball-sort',
+    links: { ios: 'https://apps.apple.com/us/app/ball-sort-puzzle-color-sort/id1660716618?l=vi', aos: 'https://play.google.com/store/apps/details?id=leogame.ball.sort.puzzle' },
     name: 'Ball Sort',
     tagline: 'Color Ball Sort',
     year: '2023',
@@ -157,6 +190,7 @@ window.GAMES = [
   // ── 6 ──────────────────────────────────────────────────────
   {
     id: 'block-cat-sort',
+    links: { ios: 'https://apps.apple.com/us/app/meow-block-cat-sort-puzzle/id6754963808', aos: 'https://play.google.com/store/apps/details?id=lg.cat.block.jam.slide.box.puzzle' },
     name: 'Block Cat Sort',
     tagline: 'Sliding Block Cat Puzzle',
     year: '2024',
@@ -183,6 +217,7 @@ window.GAMES = [
   // ── 7 ──────────────────────────────────────────────────────
   {
     id: 'brainrot-merge',
+    links: { ios: 'https://apps.apple.com/us/app/brainrot-merge-drop-fun-puzzle/id6746438761?l=vi' },
     name: 'Brainrot Merge',
     tagline: 'Viral Meme Merge Puzzle',
     year: '2025',
@@ -208,6 +243,7 @@ window.GAMES = [
   // ── 8 ──────────────────────────────────────────────────────
   {
     id: 'toy-block-sort',
+    links: { ios: 'https://apps.apple.com/us/app/block-sort-color-match-puzzle/id6757590824?l=vi', aos: 'https://play.google.com/store/apps/details?id=lg.color.block.sort.jam.wood.brick.puzzle&hl=en' },
     name: 'Toy Block Sort',
     tagline: 'Stack & Sort Blocks',
     year: '2023',
@@ -234,6 +270,7 @@ window.GAMES = [
   // ── 9 ──────────────────────────────────────────────────────
   {
     id: 'color-water-sort',
+    links: { ios: 'https://apps.apple.com/us/app/color-sort-water/id6761710087?l=vi' },
     name: 'Color Water Sort',
     tagline: 'Liquid Sort Puzzle',
     year: '2023',
@@ -258,6 +295,7 @@ window.GAMES = [
   // ── 10 ─────────────────────────────────────────────────────
   {
     id: 'farm-jam-sheep-sort',
+    links: { ios: 'https://apps.apple.com/us/app/farm-jam-sheep-sort/id6476591574?l=vi', aos: 'https://play.google.com/store/apps/details?id=leogame.farmjam.sheepsort&hl=vi' },
     name: 'Farm Jam: Sheep Sort',
     tagline: 'Fluffy Flock Sorting',
     year: '2024',
@@ -287,6 +325,7 @@ window.GAMES = [
   // ── 11 ─────────────────────────────────────────────────────
   {
     id: 'match-cat',
+    links: { ios: 'https://apps.apple.com/kz/app/match-cat-escape-car-jam/id6760378052', aos: 'https://play.google.com/store/apps/details?id=lg.car.sort.match.parking.jam.escape.cat' },
     name: 'Match Cat',
     tagline: 'Triple-Cat Match',
     year: '2024',
@@ -320,6 +359,7 @@ window.GAMES = [
   // ── 12 ─────────────────────────────────────────────────────
   {
     id: 'nut-sort',
+    links: { ios: 'https://apps.apple.com/us/app/wood-nuts-bolts-colors-sort/id6474301683?l=vi', aos: 'https://play.google.com/store/apps/details?id=leogame.screw.nuts.sort&hl=en' },
     name: 'Nut Sort',
     tagline: 'Screw & Bolt Puzzle',
     year: '2024',
@@ -345,6 +385,7 @@ window.GAMES = [
   // ── 13 ─────────────────────────────────────────────────────
   {
     id: 'pin-jam',
+    links: { ios: 'https://apps.apple.com/us/app/screw-pin-jam-puzzle-nuts-bolt/id6612013452?l=vi', aos: 'https://play.google.com/store/apps/details?id=leogame.unscrew.pin.jam&hl=vi' },
     name: 'Pin Jam',
     tagline: 'Pull-the-Pin Escape',
     year: '2023',
@@ -372,6 +413,7 @@ window.GAMES = [
   // ── 14 ─────────────────────────────────────────────────────
   {
     id: 'seat-jam',
+    links: { aos: 'https://play.google.com/store/apps/details?id=leogame.seatjam.car' },
     name: 'Seat Jam',
     tagline: 'Crowd Seat Sorting',
     year: '2024',
@@ -399,6 +441,7 @@ window.GAMES = [
   // ── 15 ─────────────────────────────────────────────────────
   {
     id: 'snack-match',
+    links: { ios: 'https://apps.apple.com/us/app/snack-match-color-supermarket/id6740663107?l=vi', aos: 'https://play.google.com/store/apps/details?id=coffee.sort.game.pack.color.sorting' },
     name: 'Snack Match',
     tagline: 'Triple-Tile Food Match',
     year: '2024',
@@ -424,6 +467,7 @@ window.GAMES = [
   // ── 16 ─────────────────────────────────────────────────────
   {
     id: 'tile-match',
+    links: { ios: 'https://apps.apple.com/us/app/zen-match-makeover-tile-club/id6450911652?l=vi', aos: 'https://play.google.com/store/apps/details?id=leogame.tilematch.tripletile&hl=vi' },
     name: 'Tile Match',
     tagline: 'Triple-Tile Puzzle',
     year: '2023',
@@ -452,6 +496,7 @@ window.GAMES = [
   // ── 17 ─────────────────────────────────────────────────────
   {
     id: 'watermelon',
+    links: { ios: 'https://apps.apple.com/us/app/game-d%C6%B0a-h%E1%BA%A5u-gh%C3%A9p-tr%C3%A1i-c%C3%A2y/id6471638938?l=vi' },
     name: 'Watermelon',
     tagline: 'Fruit Drop Merge',
     year: '2024',
@@ -480,6 +525,7 @@ window.GAMES = [
   // ── 19 ─────────────────────────────────────────────────────
   {
     id: 'woody-jam-3d',
+    links: { ios: 'https://apps.apple.com/us/app/woody-jam-color-block-puzzle/id6744888905?l=vi', aos: 'https://play.google.com/store/apps/details?id=wood.color.slide.block.puzzle.escape&hl=en' },
     name: 'Woody Jam 3D',
     tagline: '3D Plank Unblock Puzzle',
     year: '2024',
@@ -508,6 +554,7 @@ window.GAMES = [
   // ── 20 ─────────────────────────────────────────────────────
   {
     id: 'wool-2d',
+    links: { ios: 'https://apps.apple.com/us/app/wool-out-color-yarn-puzzle/id6747382365?l=vi', aos: 'https://play.google.com/store/apps/details?id=wool.sort.out.thread.knit.painting' },
     name: 'Wool 2D',
     tagline: 'Yarn Tangle Puzzle',
     year: '2024',
@@ -561,6 +608,7 @@ window.GAMES = [
   // ── 22 ─────────────────────────────────────────────────────
   {
     id: 'screw-puzzle',
+    links: { ios: 'https://apps.apple.com/us/app/gi%E1%BA%A3i-%C4%91%E1%BB%91-th%C3%A1o-g%E1%BB%97-%C4%91inh-v%C3%A0-%E1%BB%91c-v%C3%ADt/id6498714673?l=vi', aos: 'https://play.google.com/store/apps/details?id=leogame.screw.puzzle&hl=en' },
     name: 'Screw Puzzle',
     tagline: 'Unscrew & Sort Bolts',
     year: '2024',
@@ -590,6 +638,7 @@ window.GAMES = [
   // ── 23 ─────────────────────────────────────────────────────
   {
     id: 'what-the-ship',
+    links: { itch: 'https://cqtuan.itch.io/what-the-ship' },
     name: 'What The Ship',
     tagline: 'Funny Game Jam',
     year: '2025',
@@ -721,6 +770,7 @@ window.renderCover = function(g, large = false) {
     pencil: `<g transform="translate(${cx},${cy}) rotate(-30)"><rect x="-8" y="-55" width="16" height="90" fill="${c3}"/><polygon points="-8,35 8,35 0,55" fill="${c1}"/></g>`,
     cube: `<g transform="translate(${cx},${cy})"><polygon points="0,-55 50,-25 50,35 0,65 -50,35 -50,-25" fill="${c3}"/><polygon points="0,-55 50,-25 0,5 -50,-25" fill="${c1}"/><polygon points="0,5 50,-25 50,35 0,65" fill="${c2}"/></g>`,
     paw: `<g transform="translate(${cx},${cy})"><circle cx="-30" cy="-25" r="14" fill="${c3}"/><circle cx="30" cy="-25" r="14" fill="${c3}"/><circle cx="-50" cy="10" r="12" fill="${c3}"/><circle cx="50" cy="10" r="12" fill="${c3}"/><ellipse cx="0" cy="25" rx="32" ry="28" fill="${c3}"/></g>`,
+    chess: `<g transform="translate(${cx},${cy})"><rect x="-45" y="55" width="90" height="18" rx="4" fill="${c3}"/><rect x="-28" y="34" width="56" height="23" rx="3" fill="${c3}"/><path d="M -28,35 L -38,-8 L -12,12 L 0,-28 L 12,12 L 38,-8 L 28,35 Z" fill="${c3}"/><rect x="-6" y="-54" width="12" height="28" fill="${c3}"/><rect x="-17" y="-44" width="34" height="10" fill="${c3}"/></g>`,
     word: `<g transform="translate(${cx},${cy})"><rect x="-60" y="-20" width="35" height="35" rx="4" fill="${c3}"/><rect x="-18" y="-20" width="35" height="35" rx="4" fill="${c3}"/><rect x="24" y="-20" width="35" height="35" rx="4" fill="${c3}"/></g>`,
   };
 

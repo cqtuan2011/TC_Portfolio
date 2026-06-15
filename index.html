@@ -335,6 +335,43 @@
     align-items: center;
   }
   .game-card .sub .sep { opacity: 0.4; }
+  .game-card .name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  /* =================== STORE LINK BUTTONS =================== */
+  .store-links { display: flex; gap: 6px; flex-shrink: 0; }
+  .store-btn {
+    font-family: var(--mono);
+    letter-spacing: 0.04em;
+    border-radius: 6px;
+    border: 1px solid var(--line-strong);
+    color: var(--fg-dim);
+    background: rgba(255,255,255,0.02);
+    transition: all 0.15s;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1;
+  }
+  .store-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .store-btn.card { font-size: 10px; padding: 5px 9px; }
+  .store-links.panel { margin: 0 0 28px; gap: 10px; }
+  .store-btn.panel {
+    flex: 1;
+    text-align: center;
+    font-size: 13px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
   .game-card .platforms {
     position: absolute;
     top: 12px; right: 12px;
